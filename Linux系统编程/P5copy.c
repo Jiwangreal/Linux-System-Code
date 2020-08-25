@@ -11,8 +11,8 @@
 #define ERR_EXIT(m) \
     do \
     { \
-        perror(m);
-        exit(EXIT_FAILURE);
+        perror(m);  \
+        exit(EXIT_FAILURE); \
     } while(0)
 
 //实现拷贝文件的功能
@@ -23,7 +23,7 @@ int main(int argc, char* argv[])
     if (argc !=3 )
     {
         fprintf(stderr, "Usage %s src dts", argv[0]);
-        ERR_EXIT(EXIT_FAILURE);
+        ERR_exit(EXIT_FAILURE); \
     }
 
     infd = open(argv[1], O_RDONLY);

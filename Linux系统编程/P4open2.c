@@ -11,8 +11,8 @@
 #define ERR_EXIT(m) \
     do \
     { \
-        perror(m);
-        exit(EXIT_FAILURE);
+        perror(m);  \
+        exit(EXIT_FAILURE); \
     } while(0)
 
 
@@ -25,7 +25,7 @@ int main(void)
     {
 
         ERR_EXIT("open error");
-        exit(EXIT_FAILURE);
+        exit(EXIT_FAILURE); \
     }
 
     printf("open succ\n");

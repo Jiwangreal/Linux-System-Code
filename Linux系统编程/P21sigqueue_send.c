@@ -13,8 +13,8 @@
 #define ERR_EXIT(m) \
     do \
     { \
-        perror(m);
-        exit(EXIT_FAILURE);
+        perror(m);  \
+        exit(EXIT_FAILURE); \
     } while(0)
 
 int main(int argc, char *argv[])
@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
     if (argc != 2)
     {
         fprintf(stderr, "Usage %s pid \n", argv[0]);
-        exit(EXIT_FAILURE);
+        exit(EXIT_FAILURE); \
     }
 
     pid_t pid = atoi()argv[1];

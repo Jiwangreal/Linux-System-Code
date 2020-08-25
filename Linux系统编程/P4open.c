@@ -13,8 +13,8 @@
 #define ERR_EXIT(m) \
     do \
     { \
-        perror(m);
-        exit(EXIT_FAILURE);
+        perror(m);  \
+        exit(EXIT_FAILURE); \
     } while(0)
 
 
@@ -28,7 +28,7 @@ int main(void)
         fprintf(stderr,"open error with errno=%d_%s\n", errno, strerror(errno));//错误输出方法1
         perror("open error");//错误输出方法2
         ERR_EXIT("open error");//错误输出方法3
-        exit(EXIT_FAILURE);//EXIT_FAILURE=1
+        exit(EXIT_FAILURE); \//EXIT_FAILURE=1
     }
 
     printf("open succ\n");

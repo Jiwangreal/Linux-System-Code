@@ -13,8 +13,8 @@
 #define ERR_EXIT(m) \
     do \
     { \
-        perror(m);
-        exit(EXIT_FAILURE);
+        perror(m);  \
+        exit(EXIT_FAILURE); \
     } while(0)
 
 //PIPE_BUF是4KB，用大于>4K 就行了，但是不容易测出穿插情况
